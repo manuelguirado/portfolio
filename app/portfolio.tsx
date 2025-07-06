@@ -24,7 +24,7 @@ import {
   Workflow,
 } from "lucide-react"
 import Link from "next/link"
-import { ContactForm } from "./components/contact-form"
+import { ContactForm } from "../components/contact-form"
 
 export default function Portfolio() {
   const projects = [
