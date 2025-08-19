@@ -32,7 +32,7 @@ import {
 import Link from "next/link";
 import { ContactForm } from "../components/contact-form";
 
-export default function Portfolio() {
+export default function Home() {
   const projects = [
     {
       name: "ChatFriends",
