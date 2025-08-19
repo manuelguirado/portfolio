@@ -32,7 +32,7 @@ export default function Portfolio() {
       name: "ChatFriends",
       description:
         "RESTful API for a chat application with user authentication, real-time messaging, and media uploads. Includes comprehensive testing and Docker deployment.",
-      techStack: ["TypeScript", "Node.js", "Express", "MongoDB", "JWT", "Docker"],
+      techStack: ["TypeScript", "Node.js", "Express", "MongoDB", "Next.js", "Docker", "OAuth"],
       github: "https://github.com/manuelguirado/chatFriends",
       demo: "https://chat-friends-alpha.vercel.app/",
     },
