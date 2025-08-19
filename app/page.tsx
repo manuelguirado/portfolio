@@ -1,9 +1,15 @@
-"use client"
+"use client";
 
-import React from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Github,
   ExternalLink,
@@ -22,9 +28,9 @@ import {
   Cloud,
   Terminal,
   Workflow,
-} from "lucide-react"
-import Link from "next/link"
-import { ContactForm } from "../components/contact-form"
+} from "lucide-react";
+import Link from "next/link";
+import { ContactForm } from "../components/contact-form";
 
 export default function Portfolio() {
   const projects = [
@@ -32,7 +38,15 @@ export default function Portfolio() {
       name: "ChatFriends",
       description:
         "RESTful API for a chat application with user authentication, real-time messaging, and media uploads. Includes comprehensive testing and Docker deployment.",
-      techStack: ["TypeScript", "Node.js", "Express", "MongoDB", "Next.js", "Docker", "OAuth"],
+      techStack: [
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Next.js",
+        "Docker",
+        "OAuth",
+      ],
       github: "https://github.com/manuelguirado/chatFriends",
       demo: "https://chat-friends-alpha.vercel.app/",
     },
@@ -40,11 +54,18 @@ export default function Portfolio() {
       name: "Task Manager API",
       description:
         "API for managing tasks with authentication, PostgreSQL, and full test coverage. Deployed with Docker and CI/CD integration.",
-      techStack: ["TypeScript", "Node.js", "Express", "PostgreSQL", "Jest", "Docker"],
+      techStack: [
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Jest",
+        "Docker",
+      ],
       github: "https://github.com/manuelguirado/to-do-api",
       demo: "",
     },
-  ]
+  ];
 
   const techStack = [
     { name: "TypeScript", icon: Code },
@@ -60,23 +81,27 @@ export default function Portfolio() {
     { name: "AWS", icon: Cloud },
     { name: "Socket.io", icon: Workflow },
     { name: "Terminal", icon: Terminal },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       {/* Hero Section */}
       <section className="relative px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">manudev</h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+            manudev
+          </h1>
           <p className="mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
             Building scalable backend systems with TypeScript, Docker, and TDD.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-blue-600 hover:bg-blue-700"
               onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               <Mail className="mr-2 h-4 w-4" />
@@ -88,7 +113,7 @@ export default function Portfolio() {
               className="border-slate-600 text-slate-300 hover:bg-slate-800 bg-transparent"
               asChild
             >
-              <Link href="../portfolio/public/CV_ManuelGuirado_EN.pdf" download>
+              <Link href="/CV_ManuelGuirado_EN.pdf" download>
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
               </Link>
@@ -100,18 +125,25 @@ export default function Portfolio() {
       {/* About Section */}
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8">
+            About Me
+          </h2>
           <Card className="bg-slate-900/50 border-slate-800 shadow-2xl">
             <CardContent className="p-8">
               <p className="text-lg leading-relaxed text-slate-300">
-                I'm a passionate backend developer with over 2 years of experience building robust, scalable systems. My
-                journey began with JavaScript and evolved into a deep specialization in TypeScript and Node.js
-                ecosystems. I believe in writing clean, testable code and following best practices like Test-Driven
+                I'm a passionate backend developer with over 2 years of
+                experience building robust, scalable systems. My journey began
+                with JavaScript and evolved into a deep specialization in
+                TypeScript and Node.js ecosystems. I believe in writing clean,
+                testable code and following best practices like Test-Driven
                 Development (TDD).
               </p>
               <p className="mt-4 text-lg leading-relaxed text-slate-300">
-                I've worked with both SQL and NoSQL databases, containerized applications with Docker, and I'm always eager to learn new technologies and solve complex problems that
-                make a real impact. I'm also diving into AWS cloud services to expand my DevOps knowledge and be ready for production-grade systems.
+                I've worked with both SQL and NoSQL databases, containerized
+                applications with Docker, and I'm always eager to learn new
+                technologies and solve complex problems that make a real impact.
+                I'm also diving into AWS cloud services to expand my DevOps
+                knowledge and be ready for production-grade systems.
               </p>
             </CardContent>
           </Card>
@@ -121,10 +153,14 @@ export default function Portfolio() {
       {/* Soft Skills */}
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Soft Skills & Values</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+            Soft Skills & Values
+          </h2>
           <p className="text-lg text-slate-300">
-            I am a fast learner, proactive, and committed to continuous growth. I adapt quickly to new environments and love collaborating with teams to build high-impact solutions.
-            I value clean code, teamwork, and delivering real value to users.
+            I am a fast learner, proactive, and committed to continuous growth.
+            I adapt quickly to new environments and love collaborating with
+            teams to build high-impact solutions. I value clean code, teamwork,
+            and delivering real value to users.
           </p>
         </div>
       </section>
@@ -132,7 +168,9 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12">Featured Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12">
+            Featured Projects
+          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <Card
@@ -140,13 +178,21 @@ export default function Portfolio() {
                 className="bg-slate-900/50 border-slate-800 shadow-2xl hover:shadow-blue-500/10 transition-all duration-300"
               >
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold">{project.name}</CardTitle>
-                  <CardDescription className="text-slate-400">{project.description}</CardDescription>
+                  <CardTitle className="text-xl font-semibold">
+                    {project.name}
+                  </CardTitle>
+                  <CardDescription className="text-slate-400">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.techStack.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="bg-slate-800 text-slate-300">
+                      <Badge
+                        key={techIndex}
+                        variant="secondary"
+                        className="bg-slate-800 text-slate-300"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -164,7 +210,11 @@ export default function Portfolio() {
                       </Link>
                     </Button>
                     {project.demo && (
-                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700" asChild>
+                      <Button
+                        size="sm"
+                        className="bg-blue-600 hover:bg-blue-700"
+                        asChild
+                      >
                         <Link href={project.demo} target="_blank">
                           <ExternalLink className="mr-2 h-4 w-4" />
                           Demo
@@ -182,10 +232,12 @@ export default function Portfolio() {
       {/* Tech Stack Section */}
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 text-center">Tech Stack</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-12 text-center">
+            Tech Stack
+          </h2>
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
             {techStack.map((tech, index) => {
-              const IconComponent = tech.icon
+              const IconComponent = tech.icon;
               return (
                 <Card
                   key={index}
@@ -193,10 +245,12 @@ export default function Portfolio() {
                 >
                   <CardContent className="flex flex-col items-center justify-center p-6">
                     <IconComponent className="h-12 w-12 text-blue-400 mb-3" />
-                    <span className="text-sm font-medium text-slate-300">{tech.name}</span>
+                    <span className="text-sm font-medium text-slate-300">
+                      {tech.name}
+                    </span>
                   </CardContent>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -206,10 +260,13 @@ export default function Portfolio() {
       <section id="contact" className="px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Let's Work Together</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              Let's Work Together
+            </h2>
             <p className="text-lg text-slate-300">
-              I'm always interested in new opportunities and exciting projects. Whether you need a backend developer for
-              your team or want to discuss a project idea, I'd love to hear from you.
+              I'm always interested in new opportunities and exciting projects.
+              Whether you need a backend developer for your team or want to
+              discuss a project idea, I'd love to hear from you.
             </p>
           </div>
 
@@ -218,14 +275,19 @@ export default function Portfolio() {
             <div className="space-y-6">
               <Card className="bg-slate-900/50 border-slate-800 shadow-xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">Other Ways to Connect</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    Other Ways to Connect
+                  </h3>
                   <div className="space-y-4">
                     <Button
                       variant="outline"
                       className="w-full justify-start border-slate-600 text-slate-300 hover:bg-slate-800 bg-transparent"
                       asChild
                     >
-                      <Link href="https://linkedin.com/in/manuelguirado" target="_blank">
+                      <Link
+                        href="https://linkedin.com/in/manuelguirado"
+                        target="_blank"
+                      >
                         <Linkedin className="mr-3 h-5 w-5" />
                         Connect on LinkedIn
                       </Link>
@@ -235,7 +297,10 @@ export default function Portfolio() {
                       className="w-full justify-start border-slate-600 text-slate-300 hover:bg-slate-800 bg-transparent"
                       asChild
                     >
-                      <Link href="https://github.com/manuelguirado" target="_blank">
+                      <Link
+                        href="https://github.com/manuelguirado"
+                        target="_blank"
+                      >
                         <Github className="mr-3 h-5 w-5" />
                         View GitHub Profile
                       </Link>
@@ -247,8 +312,9 @@ export default function Portfolio() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4">Response Time</h3>
                   <p className="text-slate-300">
-                    I typically respond to messages within 24 hours. For urgent inquiries, feel free to reach out on
-                    LinkedIn for faster communication.
+                    I typically respond to messages within 24 hours. For urgent
+                    inquiries, feel free to reach out on LinkedIn for faster
+                    communication.
                   </p>
                 </CardContent>
               </Card>
@@ -261,10 +327,11 @@ export default function Portfolio() {
       <footer className="border-t border-slate-800 px-6 py-8 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-slate-400">
-            © {new Date().getFullYear()} manudev. Built with Next.js and Tailwind CSS.
+            © {new Date().getFullYear()} manudev. Built with Next.js and
+            Tailwind CSS.
           </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
